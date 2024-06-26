@@ -1,0 +1,140 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('neon1.jpg') no-repeat center center fixed;
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with 70% opacity */
+    background-size: cover; /* Ensure the background covers the entire viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent background overflow */
+    position: relative; /* Position relative for absolute positioning of the neon effect */
+}
+
+/* Neon glow effect at the border */
+.border-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid rgba(0, 255, 255, 0.5); /* Neon color with 50% opacity */
+    box-sizing: border-box;
+    animation: neon-border-glow 5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-border-glow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon glow effect */
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.8); /* Increased glow effect */
+    }
+}
+
+.neon-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, rgba(0, 255, 255, 0.3) 70%, rgba(0, 0, 0, 0.8) 100%);
+    animation: neon-glow 5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black for neon effect */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Neon glow effect */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #0ff; /* Neon color */
+}
+
+.converter {
+    margin-bottom: 20px;
+    border: 2px solid rgba(0, 255, 255, 0.5); /* Neon color with 50% opacity */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Neon glow effect */
+}
+
+input, select {
+    padding: 10px;
+    margin: 5px;
+    width: calc(33% - 22px);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black for neon effect */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon glow effect */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f0f; /* Neon color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: neon-glow 7s infinite alternate; /* Neon glow effect */
+    box-shadow: 
+        0 0 5px rgba(0, 255, 255, 0.8), 
+        0 0 10px rgba(0, 255, 255, 0.8), 
+        0 0 15px rgba(0, 255, 255, 0.8), 
+        0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+button:hover {
+    background-color: #ff0; /* Neon color */
+    transform: translateY(-5px);
+    box-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.8), 
+        0 0 10px rgba(255, 255, 255, 0.8), 
+        0 0 15px rgba(255, 255, 255, 0.8), 
+        0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.5), 
+        0 0 10px rgba(255, 255, 255, 0.5), 
+        0 0 15px rgba(255, 255, 255, 0.5), 
+        0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes neon-glow {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.result {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #0f0; /* Neon color */
+}
+
+.converted {
+    font-size: 1.2em;
+    color: #0f0; /* Neon color */
+    animation: neon-glow 1s infinite alternate; /* Neon glow effect */
+}
